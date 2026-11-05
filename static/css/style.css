@@ -1,0 +1,90 @@
+:root {
+  --bg: #07070f;
+  --panel: rgba(14, 16, 32, 0.85);
+  --cyan: #22d3ee;
+  --magenta: #e879f9;
+  --lime: #a3e635;
+  --danger: #fb7185;
+  --border: rgba(34, 211, 238, 0.35);
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(232, 121, 249, 0.12), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(34, 211, 238, 0.12), transparent 40%),
+    linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px) 0 0 / 100% 32px,
+    linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px) 0 0 / 32px 100%,
+    var(--bg);
+  color: #e2e8f0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.neon-title {
+  color: var(--cyan);
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.8), 0 0 24px rgba(232, 121, 249, 0.5);
+}
+
+.neon-card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.08), inset 0 0 20px rgba(232, 121, 249, 0.04);
+  backdrop-filter: blur(4px);
+}
+
+.lbl { display: block; font-size: 0.8rem; color: #94a3b8; margin-bottom: 0.25rem; }
+
+.neon-input {
+  width: 100%;
+  background: rgba(2, 6, 23, 0.8);
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 0.6rem 0.75rem;
+  color: #e2e8f0;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.neon-input:focus { border-color: var(--cyan); box-shadow: 0 0 10px rgba(34, 211, 238, 0.5); }
+
+.neon-btn, .neon-btn-sec, .neon-btn-danger {
+  border-radius: 10px;
+  padding: 0.6rem 1rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s, background 0.2s;
+}
+.neon-btn { background: linear-gradient(90deg, #0891b2, #c026d3); color: #fff; border: 1px solid var(--cyan); box-shadow: 0 0 12px rgba(34, 211, 238, 0.45); }
+.neon-btn:hover { box-shadow: 0 0 20px rgba(232, 121, 249, 0.7); }
+.neon-btn-sec { background: transparent; color: var(--cyan); border: 1px solid var(--cyan); }
+.neon-btn-sec:hover { background: rgba(34, 211, 238, 0.12); }
+.neon-btn-danger { background: transparent; color: var(--danger); border: 1px solid var(--danger); }
+.neon-btn-danger:hover { background: rgba(251, 113, 133, 0.15); box-shadow: 0 0 14px rgba(251, 113, 133, 0.5); }
+.neon-btn:active, .neon-btn-sec:active, .neon-btn-danger:active { transform: scale(0.97); }
+.neon-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+#map { height: 340px; width: 100%; border: 1px solid var(--border); }
+.leaflet-container { background: #0b1020; }
+/* Mapa base oscuro sin perder la atribución de OSM */
+.leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.9) saturate(0.7); }
+
+.qr-box { width: 100%; max-width: 320px; margin: 0 auto; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+
+.barra { height: 10px; border-radius: 999px; background: #111827; border: 1px solid #1f2937; overflow: hidden; }
+.barra-fill { height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--magenta)); box-shadow: 0 0 10px var(--magenta); transition: width 0.5s ease; }
+
+.tabla { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.tabla th { text-align: left; color: var(--cyan); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.5rem; border-bottom: 1px solid var(--border); }
+.tabla td { padding: 0.5rem; border-bottom: 1px solid rgba(51, 65, 85, 0.6); }
+.tabla tbody tr:nth-child(1) td:first-child { color: var(--lime); font-weight: 800; }
+
+.msg { padding: 0.75rem 1rem; border-radius: 10px; font-size: 0.9rem; border: 1px solid; }
+.msg-ok { background: rgba(163, 230, 53, 0.1); border-color: var(--lime); color: var(--lime); }
+.msg-error { background: rgba(251, 113, 133, 0.1); border-color: var(--danger); color: var(--danger); }
+.msg-info { background: rgba(34, 211, 238, 0.1); border-color: var(--cyan); color: var(--cyan); }
+
+.pin-sim { filter: drop-shadow(0 0 6px var(--magenta)); }
+
+@media (max-width: 640px) { #map { height: 280px; } }

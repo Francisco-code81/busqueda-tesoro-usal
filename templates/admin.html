@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel del Organizador · Búsqueda del tesoro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body data-page="admin" class="min-h-screen">
+
+  <header class="px-4 py-5 text-center border-b border-cyan-900/60">
+    <h1 class="neon-title text-2xl sm:text-3xl font-extrabold tracking-widest uppercase">Panel del Organizador</h1>
+    <p class="text-cyan-300/80 text-sm mt-1">Ranking calculado en el servidor · se actualiza solo cada 5 s</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-4 space-y-4">
+    <div id="mensaje" class="hidden" role="status" aria-live="polite"></div>
+
+    <section class="grid grid-cols-3 gap-3 text-center">
+      <div class="neon-card p-3"><p class="text-xs text-slate-400">Equipos</p><p id="stat-equipos" class="text-2xl font-bold text-cyan-300">0</p></div>
+      <div class="neon-card p-3"><p class="text-xs text-slate-400">Finalizaron</p><p id="stat-fin" class="text-2xl font-bold text-fuchsia-400">0</p></div>
+      <div class="neon-card p-3"><p class="text-xs text-slate-400">Actualizado</p><p id="stat-hora" class="text-lg font-bold text-slate-200">—</p></div>
+    </section>
+
+    <section class="neon-card p-4">
+      <div class="overflow-x-auto">
+        <table class="tabla">
+          <thead><tr><th>#</th><th>Equipo</th><th>Pistas</th><th>Tiempo</th><th>Estado</th></tr></thead>
+          <tbody id="tbody-ranking"><tr><td colspan="5">Cargando…</td></tr></tbody>
+        </table>
+      </div>
+      <p class="text-xs text-slate-500 mt-2">⚠ indica que el equipo usó el Modo Ensayo (posición simulada).</p>
+    </section>
+
+    <section class="neon-card p-4">
+      <h2 class="font-bold text-fuchsia-400 mb-2">Reiniciar partida</h2>
+      <p class="text-xs text-slate-400 mb-3">Elimina todos los equipos (incluidos sus datos personales) y todo el avance. No se puede deshacer.</p>
+      <div class="flex gap-2 flex-wrap">
+        <input id="admin-clave" type="password" class="neon-input flex-1 min-w-[12rem]" placeholder="Clave del organizador" autocomplete="off">
+        <button id="btn-reset" class="neon-btn-danger">Reiniciar partida</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

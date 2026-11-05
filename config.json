@@ -1,0 +1,121 @@
+{
+  "plaza": {
+    "nombre": "Plaza Rodríguez Peña",
+    "ciudad": "Ciudad Autónoma de Buenos Aires, Argentina",
+    "centro": { "lat": -34.5985, "lng": -58.3905 },
+    "zoom": 17
+  },
+  "juego": {
+    "titulo": "Búsqueda del tesoro geolocalizada con QR",
+    "radio_geocerca_m": 30,
+    "tolerancia_manual_m": 100,
+    "modo_ensayo_habilitado": true
+  },
+  "datos_personales": {
+    "responsable": "Equipo organizador del TP - Universidad del Salvador (USAL)",
+    "finalidad": "Identificar a los equipos participantes y elaborar el ranking de la actividad. No se utilizan para ninguna otra finalidad ni se ceden a terceros.",
+    "contacto": "organizacion@ejemplo.edu.ar"
+  },
+  "pistas": [
+    {
+      "orden": 1,
+      "nombre": "Monumento a Rodríguez Peña",
+      "lat": -34.59820,
+      "lng": -58.39020,
+      "radio_m": 30,
+      "acertijo": "En el centro del predio se erige la estatua del prócer. Buscá el código cerca de su pedestal.",
+      "token_qr": "QR_RODRIGUEZ_PENA_01",
+      "codigo_manual": "2001"
+    },
+    {
+      "orden": 2,
+      "nombre": "Palacio Pizzurno",
+      "lat": -34.59880,
+      "lng": -58.39120,
+      "radio_m": 30,
+      "acertijo": "Frente a la plaza se alza el Palacio de Educación. Observá su fachada de estilo francés.",
+      "token_qr": "QR_RODRIGUEZ_PENA_02",
+      "codigo_manual": "2002"
+    },
+    {
+      "orden": 3,
+      "nombre": "Sector de Juegos Infantiles",
+      "lat": -34.59800,
+      "lng": -58.39080,
+      "radio_m": 30,
+      "acertijo": "Donde juegan los chicos. La pista está cerca de las rejas del área de juegos.",
+      "token_qr": "QR_RODRIGUEZ_PENA_03",
+      "codigo_manual": "2003"
+    },
+    {
+      "orden": 4,
+      "nombre": "Esquina M.T. de Alvear",
+      "lat": -34.59750,
+      "lng": -58.39000,
+      "radio_m": 30,
+      "acertijo": "En el límite de la plaza. Buscá cerca del farol tradicional de la esquina.",
+      "token_qr": "QR_RODRIGUEZ_PENA_04",
+      "codigo_manual": "2004"
+    },
+    {
+      "orden": 5,
+      "nombre": "Palo Borracho Histórico",
+      "lat": -34.59840,
+      "lng": -58.39060,
+      "radio_m": 30,
+      "acertijo": "Un árbol de tronco abultado y espinas. Mirá en la base de sus raíces.",
+      "token_qr": "QR_RODRIGUEZ_PENA_05",
+      "codigo_manual": "2005"
+    },
+    {
+      "orden": 6,
+      "nombre": "Mástil de la Bandera",
+      "lat": -34.59860,
+      "lng": -58.38990,
+      "radio_m": 30,
+      "acertijo": "Donde flamea la bandera nacional. El código está cerca de la placa del mástil.",
+      "token_qr": "QR_RODRIGUEZ_PENA_06",
+      "codigo_manual": "2006"
+    },
+    {
+      "orden": 7,
+      "nombre": "Anfiteatro y Bancos",
+      "lat": -34.59890,
+      "lng": -58.39040,
+      "radio_m": 30,
+      "acertijo": "Espacio de descanso bajo la sombra. Buscá debajo del banco orientado a Callao.",
+      "token_qr": "QR_RODRIGUEZ_PENA_07",
+      "codigo_manual": "2007"
+    },
+    {
+      "orden": 8,
+      "nombre": "Esquina Callao y Paraguay",
+      "lat": -34.59920,
+      "lng": -58.39090,
+      "radio_m": 30,
+      "acertijo": "En el cruce de gran tránsito urbano. Buscá cerca del cartel de la esquina.",
+      "token_qr": "QR_RODRIGUEZ_PENA_08",
+      "codigo_manual": "2008"
+    },
+    {
+      "orden": 9,
+      "nombre": "Canil de Mascotas",
+      "lat": -34.59780,
+      "lng": -58.38960,
+      "radio_m": 30,
+      "acertijo": "Lugar reservado para los perros. La pista está en la reja exterior del canil.",
+      "token_qr": "QR_RODRIGUEZ_PENA_09",
+      "codigo_manual": "2009"
+    },
+    {
+      "orden": 10,
+      "nombre": "Cofre del Tesoro Final",
+      "lat": -34.59850,
+      "lng": -58.39050,
+      "radio_m": 30,
+      "acertijo": "¡Llegaron al final! El código QR está en el centro de la plaza.",
+      "token_qr": "QR_RODRIGUEZ_PENA_10",
+      "codigo_manual": "2010"
+    }
+  ]
+}
